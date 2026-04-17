@@ -1,0 +1,128 @@
+:root {
+  --bg: #e9ecef;
+  --panel-bg: #f7f8fa;
+  --line: #555;
+  --accent: #8ed8f8;
+  --text: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Yu Gothic UI", "Meiryo", sans-serif;
+  font-size: 15px;
+}
+
+.app-shell {
+  width: 1280px;
+  min-height: 720px;
+  margin: 14px auto;
+  border: 2px solid var(--line);
+  background: var(--panel-bg);
+}
+
+.title-bar {
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--line);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid var(--line);
+  background: #dde3e8;
+}
+
+.tab {
+  flex: 1;
+  border: 0;
+  border-right: 1px solid var(--line);
+  background: transparent;
+  padding: 10px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab:last-child {
+  border-right: 0;
+}
+
+.tab.is-active {
+  background: var(--accent);
+}
+
+.main-content {
+  padding: 12px;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.is-active {
+  display: block;
+}
+
+.inspection-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 14px;
+  min-height: 560px;
+}
+
+.frame {
+  border: 2px solid var(--line);
+  background: #fff;
+}
+
+.camera-area,
+.sign-area {
+  padding: 10px;
+}
+
+.area-title,
+.section-title {
+  margin: 0 0 10px;
+  font-size: 20px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+}
+
+.placeholder {
+  height: 430px;
+  border: 1px dashed #888;
+  display: grid;
+  place-items: center;
+  color: #666;
+  background: #f9fafb;
+}
+
+.sign-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.start-button {
+  margin-top: auto;
+  border: 2px solid var(--line);
+  background: var(--accent);
+  font-size: 22px;
+  font-weight: 700;
+  padding: 12px 10px;
+  cursor: pointer;
+}
+
+.section-body {
+  min-height: 540px;
+  padding: 14px;
+  font-size: 18px;
+}
